@@ -16,3 +16,6 @@ after running the colmap, you will find "sparse" folder in your image base direc
 bash scripts/train_llff.sh
 ```
 
+## Rendered RGB video
+https://github.com/519401113/deeplearning-finalPJ/assets/52318421/7da1a5a1-3a92-415a-bb33-62a4edbc709e
+
