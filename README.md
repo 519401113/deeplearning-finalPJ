@@ -4,7 +4,7 @@
 zipnerf (https://github.com/SuLvXiangXin/zipnerf-pytorch)
 
 ## Data Preprocess
-put your images in to a folder named "images"
+put your images in to a folder named "images", experiment photos are in 'data/images'
 ```
 bash scripts/local_colmap_and_resize.sh <path-to-images>
 ```
