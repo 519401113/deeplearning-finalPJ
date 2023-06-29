@@ -349,14 +349,10 @@ def test(model, dataloader, criterion):
             
     return test_loss, test_accuracy
 
-def CIFAR100DataLoader(split, batch_size=8, num_workers=2, shuffle=True, normalize='standard'):
-    cifar_data_path = '/remote-home/mfdu/nlpbeginner/hw2'
-    if normalize == 'imagenet':
-        mean = [0.485, 0.456, 0.406]
-        std = [0.229, 0.224, 0.225]
-    elif normalize == 'standard':
-        mean = [0.5, 0.5, 0.5]
-        std =  [0.5, 0.5, 0.5]
+def CIFAR100DataLoader(split, batch_size=8, num_workers=2, shuffle=True):
+    cifar_data_path = 'data'
+    mean=[0.5071, 0.4867, 0.4408]
+    std=[0.2675, 0.2565, 0.2761]
 
     if split == 'train':
         train_transform = transforms.Compose([
@@ -459,8 +455,8 @@ def main():
         heads=args.heads).to(device)
 
 
-    train_dataloader = CIFAR100DataLoader(split='train', batch_size=args.batch_size, num_workers=args.num_workers, shuffle=True, normalize='standard')
-    test_dataloader = CIFAR100DataLoader(split='test', batch_size=args.batch_size, num_workers=args.num_workers, shuffle=False, normalize='standard')
+    train_dataloader = CIFAR100DataLoader(split='train', batch_size=args.batch_size, num_workers=args.num_workers, shuffle=True)
+    test_dataloader = CIFAR100DataLoader(split='test', batch_size=args.batch_size, num_workers=args.num_workers, shuffle=False)
 
     criterion = nn.CrossEntropyLoss()
     optimizer = optim.Adam(model.parameters(), lr=args.lr)
