@@ -6,7 +6,10 @@ python train_contrast.py
 python train_with_pretrained.py
 python train_frozen.py
 ```
-running these commands to get a pretrained resnet, a classfier of Cifar10 with pretrained resnet and a baseline classfier with no-pretrained resnet
+Running these commands to get a pretrained resnet, a classfier of Cifar10 with pretrained resnet and a baseline classfier with no-pretrained resnet. 
+### result
+We pretrain the resnet encoder on Cifar10 training set. 
+30.1% acc with no-pretrained resnet and 41.3% acc with pretrained resnet
 
 ## P3 NeRF
 ### Code Base
