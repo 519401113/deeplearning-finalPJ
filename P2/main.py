@@ -420,8 +420,8 @@ def main():
     parser.add_argument('--num_workers', type=int,default=2)
     
     # vision transformer
-    parser.add_argument('--patch_size', type=int,default=2)
-    parser.add_argument('--max_len', type=int,default=257)
+    parser.add_argument('--patch_size', type=int,default=4)
+    parser.add_argument('--max_len', type=int,default=100)
     parser.add_argument('--embed_dim', type=int,default=512)
     parser.add_argument('--classes', type=int,default=100)        
     parser.add_argument('--layers', type=int,default=8)
