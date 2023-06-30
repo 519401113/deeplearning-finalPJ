@@ -11,6 +11,15 @@ Running these commands to get a pretrained resnet, a classfier of Cifar10 with p
 We pretrain the resnet encoder on Cifar10 training set. 
 30.1% acc with no-pretrained resnet and 41.3% acc with pretrained resnet
 
+## P2 vision transformer
+```
+cd P2
+python main.py
+```
+Running these commands to train a vision transformer with parameters 10756452, which is closed to ResNet-18 with parameters 11220132.
+### result
+ViT gets a 43.52% accuracy on CIFAR100 test dataset.
+
 ## P3 NeRF
 ### Code Base
 zipnerf (https://github.com/SuLvXiangXin/zipnerf-pytorch)
